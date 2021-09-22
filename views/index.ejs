@@ -37,7 +37,7 @@
       class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow"
     >
       <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#"
-        >Company name</a
+        >NodeJs Login JWT</a
       >
       <button
         class="navbar-toggler position-absolute d-md-none collapsed"
@@ -58,7 +58,7 @@
       />
       <div class="navbar-nav">
         <div class="nav-item text-nowrap">
-          <a class="nav-link px-3" href="#">Sign out</a>
+          <a class="nav-link px-3" href="/logout">Sign out</a>
         </div>
       </div>
     </header>
@@ -74,7 +74,10 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
                   <span data-feather="home"></span>
-                  Dashboard
+                  Welcome 
+                  <% if(user){%>
+                    <%= user.name %>
+                  <%}%>
                 </a>
               </li>
               <li class="nav-item">

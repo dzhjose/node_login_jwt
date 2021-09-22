@@ -86,5 +86,20 @@
       <br>
       <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </main>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <% if(alert) { %>
+      <script>
+        Swal.fire({
+          title: '<%= title %>',
+          text: '<%= text %>',
+          icon: '<%= icon %>',
+          position: '<%= position %>',
+          timer: '<%= timer %>',
+          showConfirmButton: <%= showConfirmButton %>
+        }).then( () => {
+          window.location = '/<%= route %>'
+        });
+      </script>
+   <% }%>
   </body>
 </html>
